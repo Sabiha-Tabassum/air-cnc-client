@@ -1,7 +1,7 @@
 // Add a room
 
 export const addRoom = async roomData => {
-    const response = await fetch('http://localhost:5000/rooms', {
+    const response = await fetch('https://air-cnc-server-seven.vercel.app/rooms', {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
@@ -17,7 +17,7 @@ export const addRoom = async roomData => {
 // get all rooms
 
 export const getAllRooms = async () => {
-    const response = await fetch('http://localhost:5000/rooms')
+    const response = await fetch('https://air-cnc-server-seven.vercel.app/rooms')
 
     const data = await response.json()
     return data
@@ -26,7 +26,7 @@ export const getAllRooms = async () => {
 // get single room
 
 export const getRoom = async (id) => {
-    const response = await fetch(`http://localhost:5000/room/${id}`)
+    const response = await fetch(`https://air-cnc-server-seven.vercel.app/room/${id}`)
 
     const data = await response.json()
     return data

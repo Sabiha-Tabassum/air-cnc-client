@@ -1,7 +1,7 @@
 // booking data
 
 export const addBooking = async bookingData => {
-    const response = await fetch('http://localhost:5000/bookings', {
+    const response = await fetch('https://air-cnc-server-seven.vercel.app/bookings', {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
@@ -18,7 +18,7 @@ export const addBooking = async bookingData => {
 // update room status
 
 export const updateStatus = async (id, status) => {
-    const response = await fetch(`http://localhost:5000/rooms/status/${id}`, {
+    const response = await fetch(`https://air-cnc-server-seven.vercel.app/rooms/status/${id}`, {
         method: 'PATCH',
         headers: {
             'content-type': 'application/json',
@@ -35,7 +35,7 @@ export const updateStatus = async (id, status) => {
 // get all bookings for a user by email
 
 export const getBookings = async email => {
-    const response = await fetch(`http://localhost:5000/bookings?email=${email}`)
+    const response = await fetch(`https://air-cnc-server-seven.vercel.app/bookings?email=${email}`)
 
     const data = await response.json()
     return data
@@ -45,7 +45,7 @@ export const getBookings = async email => {
 // delete booking
 
 export const deleteBooking = async id => {
-    const response = await fetch(`http://localhost:5000/bookings/${id}`, {
+    const response = await fetch(`https://air-cnc-server-seven.vercel.app/bookings/${id}`, {
         method: 'DELETE',
         headers: {
             'content-type': 'application/json',

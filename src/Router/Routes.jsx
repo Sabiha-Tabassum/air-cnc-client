@@ -8,6 +8,7 @@ import DashboardLayout from "../Layouts/DashboardLayout/DashboardLayout";
 import AddRoom from "../Components/Dashboard/AddRoom";
 import { getRoom } from "../api/room";
 import MyBookings from "../Components/Dashboard/MyBookings";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -32,7 +33,7 @@ export const router = createBrowserRouter([
 
         {
           path: '/room/:id',
-          element: <RoomDetails></RoomDetails>,
+          element: <PrivateRoute><RoomDetails></RoomDetails></PrivateRoute>,
           loader: ({params})=>getRoom(params.id)
         }
       ]
