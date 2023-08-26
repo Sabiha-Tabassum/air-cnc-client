@@ -4,13 +4,15 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log('environment variable', import.meta.env.VITE_apiKey)
+
 const firebaseConfig = {
-  apiKey: "AIzaSyA70rKb1uAQPx3QQUtjfMYAptHLDNpH8ds",
-  authDomain: "air-cnc-927b9.firebaseapp.com",
-  projectId: "air-cnc-927b9",
-  storageBucket: "air-cnc-927b9.appspot.com",
-  messagingSenderId: "740818110221",
-  appId: "1:740818110221:web:40d2c674fdd34745115244"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
