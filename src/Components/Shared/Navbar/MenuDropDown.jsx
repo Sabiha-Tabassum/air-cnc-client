@@ -30,7 +30,7 @@ console.log(role)
 
     return (
         <div className='relative'>
-            <div className='flex flex-row items-center gap-2'>
+            <div className='flex flex-row items-center gap-3'>
 
                 <div  className='hidden md:block font-semibold py-3 px-4 rounded-full '>
                   {!role && (
